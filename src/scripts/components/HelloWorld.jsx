@@ -4,9 +4,7 @@
 
 'use strict';
 
-var React = require('react/addons'),
-    Router = require('react-router'),
-    Link = Router.Link;
+var React = require('react/addons');
 
 
 require('!style!css!less!./../../styles/HelloWorld.less');
@@ -15,11 +13,10 @@ require('!style!css!less!./../../styles/HelloWorld.less');
 var HelloWorld = React.createClass({
   render: function () {
     return (
-        <div>
-          <Link to="home">Back</Link>
-          <p>Hello World</p>
-        </div>
-      );
+      <div>
+        <p>Hello World component</p>
+      </div>
+    );
   }
 });
 

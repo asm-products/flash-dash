@@ -3,11 +3,17 @@
 var FlashDashApp = require('./FlashDashApp');
 var HelloWorld = require('./HelloWorld');
 var React = require('react');
-var {DefaultRoute, Route, Routes} = require('react-router');
+
+var Router = require('react-router');
+var Route = Router.Route;
+var Routes = Router.Routes;
+var DefaultRoute = Router.DefaultRoute;
+var NotFoundRoute = Router.NotFoundRoute;
 
 React.renderComponent((
   <Routes location="history">
-    <DefaultRoute name="home" handler={FlashDashApp} />
-    <Route name="hello" path="/hello-world" handler={HelloWorld} />
+    <Route handler={FlashDashApp}>
+      <Route name="hello" path="/hello-world" handler={HelloWorld} />
+    </Route>
   </Routes>
-), document.body);
+), document.getElementById('content'));

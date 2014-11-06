@@ -14,13 +14,29 @@ var React = require('react/addons'),
 // CSS
 require('../../styles/normalize.css');
 require('!style!css!less!./../../styles/main.less');
-// require('!style!css!less!./../../styles/helloworld.less');
+
+// FlashDash Logo
+var flashDashLogo = require('../../images/flashdash_logo.png');
 
 var FlashDashApp = React.createClass({
   render: function() {
     return (
       <div>
-        <Link to="hello"><h1>Hello World</h1></Link>
+        <div className="header">
+          <Link to="/"> <img src={flashDashLogo} /> </Link>
+        </div>
+        <ul className="navigation">
+          <li>
+            <Link to="/"> Home </Link>
+          </li>
+          <li>
+            <Link to="hello">Hello World</Link>
+          </li>
+        </ul>
+
+        <div className="main-content">
+          {this.props.activeRouteHandler()}
+        </div>
       </div>
     );
   }
