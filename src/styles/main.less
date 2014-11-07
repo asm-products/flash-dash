@@ -1,0 +1,54 @@
+/* Delete everything after real design will be finished. */
+
+/* Stiziles */
+@main-color: #000;
+@inverted-color: contrast(@main-color);
+@link-color: #09c;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  background: @inverted-color;
+}
+
+a {
+  color: @main-color;
+  text-decoration: none;
+}
+
+
+.header {
+  background: @main-color;
+  text-align: center;
+  img {
+    width: 100px;
+    margin: 0;
+    padding: 0;
+  }
+}
+.navigation {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid lighten(@main-color, 85%);
+
+  li {
+    display: inline-block;
+    a {
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 15px 20px;
+      display: block;
+      &:hover {
+        color: lighten(@link-color, 5);
+      }
+    }
+  }
+}
+
+.main-content {
+  margin-top: 20px;
+}
