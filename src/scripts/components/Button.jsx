@@ -14,6 +14,7 @@ var Button = React.createClass({
   getDefaultProps: function () {
     return {
       buttonClass: 'button',
+      buttonExtraClass: '',
       buttonState: '',
       buttonColor: 'blue',
       buttonType: 'button',
@@ -29,6 +30,11 @@ var Button = React.createClass({
     var buttonState = this.props.buttonState;
     if (buttonState) {
       classes[buttonState] = true;
+    }
+
+    var buttonExtraClass = this.props.buttonExtraClass;
+    if (buttonExtraClass) {
+      classes[buttonExtraClass] = true;
     }
 
     var buttonColor = this.props.buttonColor;

@@ -33,7 +33,7 @@ describe('Button', function () {
     expect(Button()).toBeDefined();
   });
 
-  it('should change button color', function() {
+  it('should add a button color', function() {
     component.setProps({
       buttonColor: "red"
     });
@@ -45,6 +45,13 @@ describe('Button', function () {
       buttonState: "active"
     });
     expect(component.getDOMNode().className).toMatch(/active/);
+  });
+
+  it('should add an extra class button state', function() {
+    component.setProps({
+      buttonExtraClass: "add-dashboard"
+    });
+    expect(component.getDOMNode().className).toMatch(/add-dashboard/);
   });
 
 });
