@@ -1,0 +1,60 @@
+.transition(@element: all, @timing: .3s, @timing-function: ease-in-out){
+    -webkit-transition: @element @timing @timing-function;
+    -moz-transition: @element @timing @timing-function;
+    -ms-transition: @element @timing @timing-function;
+    -o-transition: @element @timing @timing-function;
+    transition: @element @timing @timing-function;
+}
+
+// LESS Mixins
+// Button variants
+// -------------------------
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+.button-variant(@color) {
+    color: fade(@default-white, 70%);
+    background-color: transparent;
+    border: 1px solid fade(@default-white, 30%);
+
+    &:hover,
+    &.hover,
+    &:focus {
+      border-color: @color;
+      background-color: @color;
+      color: @default-white;
+    }
+    &:active,
+    &.active{
+      border-color: @color;
+      background: transparent;
+      color: @color;
+    }
+
+    &.disabled,
+    &.inactive {
+        border-color: fade(@default-white, 7%);
+        background-color: fade(@color, 7%);
+        color: fade(@default-white, 30%);
+        cursor: default;
+    }
+
+}
+
+// https://gist.github.com/Daniel15/2549243
+// Use with colour name: .rgba(black, 0.5) or hex value: .rgba(#FF2400, 0.5)
+.rgba(@colour, @alpha)
+{
+  @alphaColour: hsla(hue(@colour), saturation(@colour), lightness(@colour), @alpha);
+  @ieAlphaColour: argb(@alphaColour);
+
+  background-color: @colour; // Fallback for older browsers
+  background-color: @alphaColour;
+
+  // IE hacks
+  zoom: 1; // hasLayout
+  background-color: transparent\9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 8+
+        filter:  ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})";  // IE 6 & 7
+
+}
+
