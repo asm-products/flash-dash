@@ -39,3 +39,47 @@ Visit [https://assembly.com](https://assembly.com) to learn more.
 ### How to write tests
 
 _TBD_
+
+### Buttons
+
+- `Router.Link`
+- Anchor
+- Button
+
+Props:
+
+- `buttonClass`
+  - only when you don't want to use `button` class, you can overwrite it using this prop
+- `buttonExtraClass`
+  - if you want to add extra classes, you should use this prop
+- `buttonColor`
+  - `blue (default) | red | green | yellow | dark-blue | dark-red | dark-green | dark-yellow`
+- `buttonState`
+  - `active | disabled | none (default)`
+- `href` for `<a>`
+  - `null (default)`
+- `routeTo` for `Router.Link`
+  - `null (default)`
+- `type` for `<button>`
+  - `null (default)`
+
+
+React Example:
+
+For `Router.Link` you need to add `routeTo` prop. E.g.
+
+```javascript
+<Button routeTo="home" buttonColor="yellow"> Home </Button>
+```
+
+`<button>` is set by default
+
+```javascript
+<Button buttonColor="red" buttonExtraClass="add-dashboard"> Add Dashboard </Button>
+```
+
+`<a>` is added into the DOM when `href=""` is added as prop. E.g.
+
+```javascript
+<Button href="http://www.assembly.com"> Go to Assembly.com </Button>
+```
