@@ -6,36 +6,28 @@
 
 var React = require('react/addons'),
     Router = require('react-router'),
-    Link = Router.Link;
+    TopHeader = React.createFactory(require('./TopHeader.jsx'));
+
 
 // Export React so the devtools can find it
+
 (window !== window.top ? window.top : window).React = React;
+(window !== window.top ? window.top : window).Router = Router;
 
 // CSS
-require('../../styles/normalize.css');
-require('!style!css!less!./../../styles/main.less');
-
-// FlashDash Logo
-var flashDashLogo = require('../../images/flashdash_logo.png');
+require('./../../styles/normalize.css');
 
 var FlashDashApp = React.createClass({
   render: function() {
     return (
       <div>
-        <div className="header">
-          <Link to="/"> <img src={flashDashLogo} /> </Link>
-        </div>
-        <ul className="navigation">
-          <li>
-            <Link to="/"> Home </Link>
-          </li>
-          <li>
-            <Link to="hello">Hello World</Link>
-          </li>
-        </ul>
+        {Router.renderRoutesToStaticMarkup}
+        <TopHeader title={this.props.activeRouteHandler().props.pageTitle} />
 
         <div className="main-content">
-          {this.props.activeRouteHandler()}
+
+          <this.props.activeRouteHandler />
+
         </div>
       </div>
     );
