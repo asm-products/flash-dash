@@ -12,9 +12,10 @@ var React = require('react/addons'),
 // Export React so the devtools can find it
 
 (window !== window.top ? window.top : window).React = React;
-(window !== window.top ? window.top : window).Router = Router;
+
 
 // CSS
+require('./../../styles/main.less');
 require('./../../styles/normalize.css');
 
 var FlashDashApp = React.createClass({

@@ -9,9 +9,7 @@ var React = require('react');
 
     FlashDashApp = React.createFactory(require('./FlashDashApp.jsx')),
     HelloWorld = React.createFactory(require('./HelloWorld.jsx')),
-    StyleGuide = React.createFactory(require('./StyleGuide.jsx')),
-
-require('./../../styles/main.less');
+    StyleGuide = React.createFactory(require('./StyleGuide.jsx'));
 
 // Make Welcome and NotFound(404) separate components
 
