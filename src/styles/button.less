@@ -20,29 +20,60 @@
   text-decoration: none;
   float: left;
 
+  &.link {
+    padding: 0 5px;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+  }
+
 
   &.blue {
-      .button-variant(@blue);
+    .button-variant(@blue);
+    &.link {
+      .button-link(@blue);
+    }
   }
   &.red {
-      .button-variant(@red);
+    .button-variant(@red);
+    &.link {
+      .button-link(@red);
+    }
   }
   &.green {
-      .button-variant(@green);
+    .button-variant(@green);
+    &.link {
+      .button-link(@green);
+    }
   }
   &.yellow {
-      .button-variant(@yellow);
+    .button-variant(@yellow);
+    &.link {
+      .button-link(@yellow);
+    }
   }
   &.dark-blue {
-      .button-variant(@dark-blue);
+    .button-variant(@dark-blue);
+    &.link {
+      .button-link(@dark-blue);
+    }
   }
   &.dark-red {
-      .button-variant(@dark-red);
+    .button-variant(@dark-red);
+    &.link {
+      .button-link(@dark-red);
+    }
   }
   &.dark-green {
-      .button-variant(@dark-green);
+    .button-variant(@dark-green);
+    &.link {
+      .button-link(@dark-green);
+    }
   }
   &.dark-yellow {
-      .button-variant(@dark-yellow);
+    .button-variant(@dark-yellow);
+    &.link {
+      .button-link(@dark-yellow);
+    }
   }
 }

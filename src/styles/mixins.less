@@ -39,6 +39,21 @@
     }
 
 }
+.button-link(@color) {
+  .button-variant(@color);
+  border: 0;
+  background: none;
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &:active
+  &.active,
+  &.disabled,
+  &.inactive {
+    background: none;
+  }
+}
 
 // https://gist.github.com/Daniel15/2549243
 // Use with colour name: .rgba(black, 0.5) or hex value: .rgba(#FF2400, 0.5)
