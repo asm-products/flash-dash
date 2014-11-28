@@ -18,15 +18,19 @@
   vertical-align: middle;
   outline: none;
   text-decoration: none;
-  float: left;
 
   &.link {
     padding: 0 5px;
     margin: 0;
     border-radius: 0;
     border: none;
+    line-height: 1.5em;
+    height: auto;
   }
 
+  & > i {
+    margin-right: .5em;
+  }
 
   &.blue {
     .button-variant(@blue);

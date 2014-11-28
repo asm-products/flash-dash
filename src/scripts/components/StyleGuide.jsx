@@ -16,6 +16,26 @@ var StyleGuide = React.createClass({
           <h2 className="subtitle">States for main buttons: normal | hover | active | disabled</h2>
         </div>
 
+        <h2 className="title">FontAwesome <i className="fa fa-heart"></i></h2>
+
+        <div className="row">
+          <i className="fa fa-heart"></i>
+          <i className="fa fa-angellist"></i>
+          <i className="fa fa-lastfm"></i>
+          <i className="fa fa-soccer-ball-o"></i>
+        </div>
+
+        <div className="row">
+          <Button buttonColor="blue" buttonExtraClass="link">
+            <i className="fa fa-heart"></i>
+            Love it
+          </Button>
+          <Button buttonColor="blue">
+            <i className="fa fa-flash"></i>
+            Flash Dash APP
+          </Button>
+        </div>
+
         <h2 className="title">Link Buttons</h2>
 
         <div className="row">
