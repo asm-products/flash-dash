@@ -1,0 +1,44 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: @default-black;
+}
+
+body {
+  font: 300 @main-font-size/1.5em @main-font-family;
+  color: @default-white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix() {
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.row {
+  margin: 20px 0;
+  .clearfix();
+  .button {
+    margin: 0;
+    margin-right: 20px;
+  }
+}
+
+.main-content {
+  margin: 20px;
+}

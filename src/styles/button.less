@@ -1,0 +1,83 @@
+.button {
+  display: inline-block;
+  /* move this to variables */
+  height: 30px;
+  line-height: 28px; /* height - 2px border */
+  padding: 0 30px;
+  margin: 5px 15px;
+
+  .transition();
+
+  font-size: @main-font-size;
+  font-weight: bold;
+  font-family: @main-font-family;
+  text-transform: uppercase;
+
+  border-radius: 15px;
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+  text-decoration: none;
+
+  &.link {
+    padding: 0 5px;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    line-height: 1.5em;
+    height: auto;
+  }
+
+  & > i {
+    margin-right: .5em;
+  }
+
+  &.blue {
+    .button-variant(@blue);
+    &.link {
+      .button-link(@blue);
+    }
+  }
+  &.red {
+    .button-variant(@red);
+    &.link {
+      .button-link(@red);
+    }
+  }
+  &.green {
+    .button-variant(@green);
+    &.link {
+      .button-link(@green);
+    }
+  }
+  &.yellow {
+    .button-variant(@yellow);
+    &.link {
+      .button-link(@yellow);
+    }
+  }
+  &.dark-blue {
+    .button-variant(@dark-blue);
+    &.link {
+      .button-link(@dark-blue);
+    }
+  }
+  &.dark-red {
+    .button-variant(@dark-red);
+    &.link {
+      .button-link(@dark-red);
+    }
+  }
+  &.dark-green {
+    .button-variant(@dark-green);
+    &.link {
+      .button-link(@dark-green);
+    }
+  }
+  &.dark-yellow {
+    .button-variant(@dark-yellow);
+    &.link {
+      .button-link(@dark-yellow);
+    }
+  }
+}

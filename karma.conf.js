@@ -18,6 +18,9 @@ module.exports = function (config) {
           test: /\.css$/,
           loader: 'style!css'
         }, {
+          test: /\.less$/,
+          loader: 'style-loader!css-loader!less-loader'
+        }, {
           test: /\.gif/,
           loader: 'url-loader?limit=10000&mimetype=image/gif'
         }, {
@@ -53,6 +56,13 @@ module.exports = function (config) {
     browsers: ['PhantomJS'],
     reporters: ['progress'],
     captureTimeout: 60000,
-    singleRun: true
+    singleRun: true,
+    plugins: [
+      require("karma-script-launcher"),
+      require("karma-webpack"),
+      require("karma-phantomjs-launcher"),
+      require("karma-jasmine"),
+      require("karma-chrome-launcher")
+    ]
   });
 };
