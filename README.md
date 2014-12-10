@@ -1,4 +1,4 @@
-# Flash Dash [![Build Status](https://travis-ci.org/catalinmiron/flash-dash.svg)](https://travis-ci.org/catalinmiron/flash-dash)
+# Flash Dash [![Build Status](https://travis-ci.org/asm-products/flash-dash.svg?branch=master)](https://travis-ci.org/asm-products/flash-dash)
 
 ## Customizable dashboards for everyone
 
