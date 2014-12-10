@@ -43,6 +43,6 @@
     "webpack-dev-server": "^1.6.5"
   },
   "scripts": {
-    "test": "npm install && grunt test"
+    "test": "grunt test"
   }
 }
