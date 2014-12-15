@@ -104,8 +104,25 @@ module.exports = function (grunt) {
           ]
         }]
       }
+    },
+
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      heroku: {
+        options: {
+          remote: 'git@heroku.com:flash-dash.git',
+          branch: 'master'
+        }
+      }
     }
   });
+
+
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
@@ -118,9 +135,10 @@ module.exports = function (grunt) {
     ]);
   });
 
+
   grunt.registerTask('test', ['karma']);
 
-  grunt.registerTask('build', ['clean', 'copy', 'webpack']);
+  grunt.registerTask('build', ['clean', 'copy', 'webpack', 'buildcontrol']);
 
   grunt.registerTask('default', []);
 };
