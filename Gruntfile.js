@@ -115,7 +115,7 @@ module.exports = function (grunt) {
       },
       heroku: {
         options: {
-          remote: 'git@heroku.com:flash-dash.git',
+          remote: 'git@heroku.com:flashdash.git',
           branch: 'master'
         }
       }
