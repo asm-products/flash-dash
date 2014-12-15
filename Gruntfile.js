@@ -135,10 +135,16 @@ module.exports = function (grunt) {
     ]);
   });
 
+  grunt.registerTask('deploy', function (target) {
+    if (target === 'heroku') {
+      grunt.task.run(['clean', 'copy', 'webpack', 'buildcontrol']);
+    }
+  });
+
 
   grunt.registerTask('test', ['karma']);
 
-  grunt.registerTask('build', ['clean', 'copy', 'webpack', 'buildcontrol']);
+  grunt.registerTask('build', ['clean', 'copy', 'webpack']);
 
   grunt.registerTask('default', []);
 };
