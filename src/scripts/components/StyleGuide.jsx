@@ -12,6 +12,9 @@ var StyleGuide = React.createClass({
     return (
       <div>
         <div className="row">
+          <h2 className="title">Deployed via Heroku <i className="fa fa-heart"></i></h2>
+        </div>
+        <div className="row">
           <h2 className="title">Main Buttons</h2>
           <h2 className="subtitle">States for main buttons: normal | hover | active | disabled</h2>
         </div>

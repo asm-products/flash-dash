@@ -1,0 +1,15 @@
+{
+  "name": "flashdash",
+  "version": "0.0.0",
+  "description": "",
+  "repository": "",
+  "private": true,
+  "src": "src",
+  "test": "test",
+  "dist": "dist",
+  "mainInput": "main",
+  "mainOutput": "main",
+  "dependencies": {
+    "statik": "~1.2.5"
+  }
+}
