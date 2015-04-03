@@ -3,8 +3,8 @@
 'use strict';
 
 var React = require('react'),
-    Button = React.createFactory(require('./Button.jsx')),
-    Router = require('react-router');
+Button = React.createFactory(require('./Button.jsx')),
+Router = require('react-router');
 
 var StyleGuide = React.createClass({
 
@@ -110,7 +110,7 @@ var StyleGuide = React.createClass({
           <Button buttonColor="dark-yellow">Dark yellow</Button>
         </div>
       </div>
-      );
+    );
   }
 });
 

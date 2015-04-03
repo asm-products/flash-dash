@@ -1,13 +1,13 @@
 /**
- * @jsx React.DOM
- */
+* @jsx React.DOM
+*/
 
 'use strict';
 
 var React = require('react/addons'),
-    Router = require('react-router'),
-    Link = React.createFactory(Router.Link),
-    classSet = React.addons.classSet;
+Router = require('react-router'),
+Link = React.createFactory(Router.Link),
+classSet = React.addons.classSet;
 
 var Button = React.createClass({
 
@@ -15,7 +15,7 @@ var Button = React.createClass({
     return {
       buttonClass: 'button',
       buttonExtraClass: '',
-      buttonState: '',
+      buttonState: 'hover',
       buttonColor: 'blue',
       buttonType: 'button',
       routeTo: null
@@ -47,42 +47,43 @@ var Button = React.createClass({
 
   render: function () {
     var renderFuncName,
-        classes = this.getButtonClasses();
+    classes = this.getButtonClasses();
 
     return (
       this.props.routeTo ? this.renderLink(classes)
-                         : this.props.href ? this.renderAnchor(classes)
-                                           : this.renderButton(classes));
-  },
+      : this.props.href ? this.renderAnchor(classes)
+      : this.renderButton(classes));
+    },
 
-  renderLink: function (classes) {
-    return <Link
+    renderLink: function (classes) {
+      return <Link
         className={classSet(classes)}
         to={this.props.routeTo}>
         {this.props.children}
       </Link>;
-  },
+    },
 
-  renderButton: function (classes) {
-    return (
-      <button
-        type={this.props.buttonType}
-        className={classSet(classes)}>
-        {this.props.children}
-      </button>
-    );
-  },
+    renderButton: function (classes) {
+      return (
+        <button
+          onClick={this.props.onClick}
+          type={this.props.buttonType}
+          className={classSet(classes)}>
+          {this.props.children}
+        </button>
+      );
+    },
 
-  renderAnchor: function (classes) {
-    var href = this.props.href || '#';
+    renderAnchor: function (classes) {
+      var href = this.props.href || '#';
 
-    return <a
+      return <a
         href={href}
         className={classSet(classes)}>
         {this.props.children}
       </a>;
-  }
+    }
 
-});
+  });
 
-module.exports = Button;
+  module.exports = Button;

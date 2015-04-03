@@ -1,0 +1,268 @@
+@blue: #38ccf1;
+@green: #03f08d;
+@red: #f95441;
+@yellow: #fbd140;
+@dark-blue: #182d45;
+@dark-green: #05552b;
+@dark-red: #5b1816;
+@dark-yellow: #e29634;
+@default-black: #222;
+@default-white: #fff;
+
+
+
+.mainDashboard{
+
+  position:absolute;
+  left:0;
+  width:100%;
+  height:98vh;
+}
+
+.nav-menu{
+  
+  position:relative;
+  margin:1.5em;
+  margin-top:2em;
+  float:left;
+  color: white;
+  width:100%;
+
+  .button-group{
+  
+    position:relative;
+	float:left;
+	margin-top:1em;
+	top:1em;
+  
+  }
+  
+  .widget-logout{
+  
+    color:ghostwhite;
+    margin:1.8em;
+	margin-top:2.8em;
+    position:relative;
+    float:left;
+ 
+  }
+  
+ .image-wrap{
+	
+	height:150px;
+    width:50px;
+    position:absolute;
+	
+    img{
+	 
+	  background: @dark-blue;
+	  position:relative;
+      width: 50px;
+      height:50px;
+      padding: 0;
+	  top:1em;
+      
+    }
+	
+  }
+  
+  .button-group{
+  
+    margin:1em;
+    margin-left:1.2em;
+    
+	.color-square{
+      width:30px;
+	  height:30px;
+	  float: left;
+	  margin:.2em;
+	  margin-left:.6em;
+    
+	  &.dark-blue{
+	    background: @dark-blue;
+		border: solid white 2px;
+	  }
+	  
+	  &.blue{
+	    background: @blue;
+		border: solid white 2px;
+	  }
+	  
+	  &.green{
+	    background: @green;
+		border: solid white 2px;
+	  }
+	  
+	  &.yellow{
+	    background: @yellow;
+		border: solid white 2px;
+	  }
+	  
+	  &.red{
+	    background: @red;
+		border: solid white 2px;
+	  }
+	
+	}	
+	
+  }
+
+  .menu-right{
+    
+	position:relative;
+	left:60px;
+	top:-10px;
+	width:78%;
+	
+  }
+
+}	
+
+
+.main-images{
+
+  clear:both;
+  position:relative;
+  top:40px;
+  margin-left: auto;
+  margin-right:auto;
+  width:95%;
+  height:550px;
+
+}
+
+.big-images{
+  
+  position:relative;
+  float:left;
+  width:33%;
+  display:cover;
+  overflow:hidden;  
+  padding:2em;
+  
+  img{
+    
+	padding:2em;
+    
+  }
+  .image-wrapper{
+  
+    position: relative;
+	height: 100%;
+	width:100%;
+	background: inherit;
+	   
+  }
+  
+
+}
+
+.editbutton{
+  position:relative;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  
+}
+
+.deletebutton{
+  position:absolute;
+  top:1%;
+
+  right: 0%;
+}
+
+.big-image{
+
+  position:relative;
+  float:left;
+  width:100%;
+  display:cover;
+  overflow:hidden;    
+    
+}
+
+#left-image,#center-image,#right-image{
+
+  position:relative;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+  heigth:100%;
+
+
+}
+  
+.button-size{
+  width:100px;
+  background: blue;
+  height:200px;
+}
+
+.subsong{
+ 
+  position:absolute;
+  top:0;
+  width:100%;
+}
+
+
+.title,.subtitle{
+  position:relative;
+  text-align:center;
+
+}
+
+.title{
+  top:10px;
+  width:100%;
+  text-align:center;
+}
+
+.subtitle{
+  width:100%;
+  top:10px;
+}
+
+.faded{
+  opacity: 0.2;
+}
+
+.tweets{
+    
+  background: blue;
+  
+}
+
+.subtweet{
+  
+  top: 45%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+ 
+}
+
+@media (max-width: 600px){
+
+  #nav-menu{
+    width:100%;
+  }  
+
+  .main-images{
+
+    top:20px;
+
+  }
+
+  .big-images{
+  
+    img{
+      padding:.5em;
+    }
+  
+  }
+
+}
+
+

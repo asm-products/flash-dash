@@ -1,12 +1,12 @@
 /**
- * @jsx React.DOM
- */
+* @jsx React.DOM
+*/
 
 'use strict';
 
 var React = require('react/addons'),
-    Router = require('react-router'),
-    Button = React.createFactory(require('./Button.jsx'));
+Router = require('react-router'),
+Button = React.createFactory(require('./Button.jsx'));
 
 // FlashDash Logo
 var flashDashLogo = require('../../images/flashdash_logo.png');

@@ -1,0 +1,160 @@
+
+.transition (@time: .1s, @range: all) {
+  -moz-transition: @range @time ;
+  -webkit-transition: @range @time ;
+  -o-transition: @range @time ;
+  transition: @range @time ;
+}
+
+.transition-delay (@time: .1s) {
+  -webkit-transition-delay: @time;  
+  -moz-transition-delay: @time;  
+  -o-transition-delay: @time;  
+  -transition-delay: @time; 
+}
+
+.border-radius(@radius) {
+  -moz-border-radius:@radius;
+  -webkit-border-radius:@radius; 
+  border-radius: @radius;
+}
+
+.gradient (@coler1: #fff, @coler2: #ccc) {
+  background: @coler1;
+  background: -moz-linear-gradient(@coler1, @coler2);
+  background: -webkit-linear-gradient(@coler1, @coler2);
+  background: -o-linear-gradient(@coler1, @coler2);
+}
+
+.box-shadow(@dims:0 0 10px, @color:#000) {
+  box-shadow: @dims @color; // Opera, FFX4
+  -moz-box-shadow:@dims @color; // FFX3.5
+  -webkit-box-shadow:@dims @color; // Safari/Chrome/WebKit
+  .ie7 { filter: e(%("progid:DXImageTransform.Microsoft.Shadow(color='%d', Direction=135, Strength=3)", @color)); }
+}
+
+.inset(@dims:1px 1px 1px, @color:#fff) {
+}
+
+
+.modalButton {
+  margin: 2px auto;
+  font-size: .95em;
+  padding-left: 10px;
+  padding-right:10px;
+  
+  text-decoration: none;
+  font-weight: 400; 
+  color: white;
+  border: 1px solid rgba(255,255,355,.3);
+  cursor: pointer;
+  position: relative;
+  background: black;
+  display: block;
+  text-align: center;
+  .inset;
+  .border-radius(12px);
+  .transition;
+  &:hover{ color: #333; background: #eeffff; .transition;}
+}
+
+.modalbg {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0);
+	z-index: 99999;
+	.transition(2s);
+  .transition-delay(.2s);
+	display: block;
+	pointer-events: none;
+  .dialog {
+    width: 60%;
+	height:60%;
+    position: relative;
+    top: -1000px;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    .border-radius(10px);
+    .gradient;
+    .box-shadow;
+  }
+}
+
+.openDialog {
+	display: block;
+	pointer-events: auto;
+    background: rgba(5, 10 , 20, .7);
+    .transition();
+    .dialog {
+    top: 5%;
+	z-index:9999;
+    .transition(.4s);
+    .transition-delay;
+  }
+}
+
+
+
+.close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  .box-shadow;
+  .transition;
+  .transition-delay(.2s);
+  &:hover { background: #00d9ff; .transition; }
+}
+
+.fineprint {
+  font-style: italic;
+  font-size: 10px;
+  color: #646;
+}
+a { color: #333; text-decoration: none; }
+
+#editable{
+  width:100%;
+  height:100%;
+  position:absolute;
+  background: rgba(10,10,10,0.7);
+  border: ridge white 2px;
+  bottom:200%;
+  z-index:999;  
+}
+
+.wrapper{
+
+  color:black;
+
+}
+
+
+.invisible{
+  width: 0;
+  height:0;
+  opacity: 0;
+}
+
+
+@media (max-width:640px){
+
+  .modalButton{
+    font-size:.7em;
+  }
+
+}
+
